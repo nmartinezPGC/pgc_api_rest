@@ -1,0 +1,30 @@
+spring:
+  thymeleaf:
+    cache: false # Ingnorar el cache para las plantillas thymeleaf
+  profiles:
+    active: dev
+  datasource: # Config conexion a una BD
+    platform: postgresql
+    driverClassName: org.postgresql.Driver
+    ## url: jdbc:postgresql://localhost:5432/PGC_HONDURAS
+    url: jdbc:postgresql://localhost:5432/PGC_HONDURAS
+    username: postgres
+    password: postgres
+    # Ejecutar el script de carga Inicial (schema y data *sql)
+    initialization-mode: never # never/always para que no corra el script
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      # Hibernate ddl auto (create, create-drop, validate, update)
+      ddl-auto: update # Comprueba si las Entities corresponden con las tablas, sino las genera en la BD
+    generate-ddl: true
+    show-sql: true # Muestra SQL en pantalla
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+server:
+    port: 8090
+name: dev-PGC
+servers:
+  - www.pgc-dev.com
