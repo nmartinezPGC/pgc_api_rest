@@ -1,6 +1,7 @@
 package com.api.pgc.core.APIRestPGC;
 
 // import javafx.application.Application;
+import javafx.application.Application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -24,8 +25,8 @@ public class ApiRestPgcApplication extends SpringBootServletInitializer {
 	/**
 	 * Used when run as WAR
 	 */
-	/*@Override
+	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return builder.sources(Application.class);
-	}*/
+	}
 }
